@@ -1,11 +1,16 @@
 p { 
-  font-family: Helvetica, Arial, sans-serif,;
+  font-family:Helvetica, Arial, sans-serif,;
   font-size: 16px;
   color: #f403fc;
   }
 
  body {
             background-color:#9beaf5
+
+        }
+
+#wip-math-hub-thing {
+            font-family:verdana;
 
         }
    
