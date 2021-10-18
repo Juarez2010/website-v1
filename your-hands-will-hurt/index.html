@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Homepage Maker">
+    <meta property="og:description" content="This homepage was created with https://cabalex.github.io/homepage-maker .">
+    <meta property="og:image" content="https://cabalex.github.io/homepage-maker/assets/cover.png">
+    <title>My Homepage</title>
+    </head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap');
+:root {
+    --black: #111;
+    --grey: #333;
+    --red: #ED4245;
+    --blue: #5865F2;
+    --yellow: #FEE75C;
+    --green: #57F287;
+    color-scheme: dark;
+}
+
+body {
+    background-color: var(--black);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+header {
+    background-color: var(--blue);
+}
+footer {
+    background-color: var(--grey);
+}
+header, footer {
+    border-radius: 0.25em;
+    min-height: 200px;
+    margin: 10px;
+    top: 0;
+    position: relative;
+}
+img {
+    vertical-align: middle;
+}
+header > * {
+    position: absolute;
+    margin: 10px;
+    bottom: 10px;
+    width: 100%;
+}
+footer > * {
+    position: absolute;
+    margin: 10px;
+    top: 10px;
+    width: 100%;
+}
+section > h1 {
+    margin-left: 20px;
+}
+.subtext {
+    font-size: 12px;
+}
+.spacer {
+    width: 20px;
+    flex-shrink: 0;
+}
+h1, h2, h3 {
+    font-family: 'Work Sans', sans-serif;
+    margin-bottom: 5px;
+}
+.warning-bar {
+    margin: 10px;
+    background-color: var(--red);
+    padding: 10px;
+    border-radius: 0.25em;
+    text-decoration: none;
+}
+*:not(.card) > a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+}
+.cardlist {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px;
+    animation: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0s 1 slideInFromBottom;
+}
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(50%);
+        filter: opacity(0);
+    }
+    100% {
+        transform: translateY(0);
+        filter: opacity(1);
+    }
+}
+@keyframes cardDelete {
+    0% {
+        transform: translateY(0);
+        filter: opacity(1);
+    }
+    50% {
+        transform: translateY(100%);
+        filter: opacity(0);
+        width: 200px;
+    }
+    100% {
+        transform: translateY(100%);
+        filter: opacity(0);
+        width: 0px;
+    }
+}
+@keyframes rowDelete {
+    0% {
+        transform: translateX(0);
+        filter: opacity(1);
+    }
+    50% {
+        transform: translateX(-100%);
+        filter: opacity(0);
+    }
+    100% {
+        transform: translateX(-100%);
+        filter: opacity(0);
+    }
+}
+@keyframes cardAdd {
+    0% {
+        transform: translateY(100%);
+        filter: opacity(0);
+        width: 0px;
+    }
+    50% {
+        transform: translateY(100%);
+        filter: opacity(0);
+        width: 200px;
+    }
+    100% {
+        transform: translateY(0);
+        filter: opacity(1);
+    }
+}
+@keyframes shakeDeny {
+    0% {
+        transform: 0;
+        filter: brightness(1);
+    }
+    25% {
+        transform: translateX(-10px);
+        filter: brightness(0.8);
+    }
+    75% {
+        transform: translateX(10px);
+        filter: brightness(0.8);
+    }
+    100% {
+        filter: brightness(1);
+        transform: 0;
+    }
+}
+.card {
+    width: 200px;
+    position: relative;
+    flex-shrink: 0;
+    height: 100px;
+    border-radius: 0.25em;
+    z-index: 1;
+    user-select: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: 100% 0% !important;
+    overflow: hidden;
+    background-color: white;
+}
+.card:not([id]):not(.card-empty):not(.my-card) {
+    background: linear-gradient(90deg, #000 0%, #fff 100%);
+}
+.card::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%);
+    background-blend-mode: multiply;
+}
+.card:hover:not(.card-empty):not(.card-disabled) {
+    transform: scale(1.1);
+    z-index: 2;
+    box-shadow: 0 0 5px black;
+}
+.card a {
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 10px);
+    color: inherit;
+    top: 0;
+    text-decoration: none;
+    overflow: hidden;
+    padding: 5px;
+    transition: transform 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.card:not(.card-empty):not(.card-disabled) a:active {
+    transform: scale(0.9);
+    z-index: 2;
+}
+.card a * {
+    margin-top: 15px;
+}
+.card a h1 {
+    padding-top: 50px;
+    transition: padding 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.card:hover:not(.card-empty) a h1 {
+    padding-top: 0px;
+}
+.card p {
+    font-size: 12px;
+}
+.card-empty {
+    border: 3px dashed white;
+    width: 194px;
+    background-color: transparent;
+    height: 94px;
+}
+.card-empty:before {
+    background: none;
+}
+/* my links */
+.my-card {
+    background-color: var(--blue);
+}
+#add-link {
+    transition: filter 0.2s;
+    cursor: pointer;
+}
+#add-link:hover {
+    filter: brightness(0.8)
+}
+</style>
+<body>
+    <header>
+        <div><grammarly-extension data-grammarly-shadow-root="true" style="position: absolute; top: 0px; left: 0px; pointer-events: none;" class="cGcvT"></grammarly-extension><grammarly-extension data-grammarly-shadow-root="true" style="position: absolute; top: 0px; left: 0px; pointer-events: none;" class="cGcvT"></grammarly-extension>
+            <h1>Homepage Maker</h1>
+            <span class="subtext">A tile based editor for homepages :)</span>
+            <p spellcheck="false">Hello</p>
+        </div>
+    </header>
+    
+    
+    
+    
+    <section time="2">
+        <h1>You can find me onn</h1>
+        <div class="cardlist" id="workingOn">
+            <div class="spacer"></div>
+            <article class="card" time="0" style="background: linear-gradient(90deg, rgb(93, 7, 242), rgb(2, 5, 7));">
+                <a href="https://scratch.mit.edu/users/Juarez2010/">
+                    <h1>Scratch</h1>
+                    <p>Where I'm usually found at.</p>
+                </a>
+            </article>
+            <article class="card" time="1634336609079" style="background: linear-gradient(90deg, rgb(7, 166, 44), rgb(2, 10, 4));"><a href="https://github.com/Juarez2010">
+    <h1>Github</h1>
+    <p>You can also find me here.</p>
+</a></article><article class="card card-empty card-disabled">
+                <a><h1>Coming soon</h1></a>
+            </article>
+        </div>
+    </section>
+    <section time="3">
+        <h1>My projects</h1>
+        <div class="cardlist" id="myProjects">
+            <div class="spacer"></div>
+            <article class="card" time="1634336963345" style="background-image: url(&quot;https://juarez2010.github.io/fnf/images/FNF-but-confusing-title.png&quot;);"><a href="https://scratch.mit.edu/projects/580962066">
+    <h1>idk</h1>
+    <p>confusing</p>
+</a></article><article class="card card-empty card-disabled">
+                <a><h1>Coming soon</h1></a>
+            </article>
+        </div>
+    </section>
+    <section time="1634336584156">
+<h1>idk what to put here</h1>
+<div class="cardlist" id="myProjects">
+    <div class="spacer"></div>
+    <article class="card card-empty card-disabled">
+        <a><h1>Coming soon</h1></a>
+    </article>
+</div></section>
+    <footer>
+        <div>
+            <h1>Thanks for visiting!</h1>
+            <p>For more fun projects, visit <a href="https://cabalex.github.io">cabalex.github.io</a></p>
+            <b style="color: #999">cabalex 2021</b>
+        </div>
+    </footer>
+    <a id="watermark" style="size: 12px; color: var(--grey); font-weight: bold; padding: 10px" href="https://cabalex.github.io/homepage-maker">This homepage was created using Homepage Maker by cabalex.</a>
+
+
+<script type="text/javascript" defer>async function shakeAnim(ev) {
+    if (this.style.animation) return;
+    this.style.animation = 'shakeDeny 0.25s ease-in-out'
+    await new Promise(r => setTimeout(r, 250));
+    this.style.animation = '';
+}
+const cardElems = document.getElementsByClassName('card-disabled');
+for (var i = 0; i < cardElems.length; i++) {
+    cardElems[i].addEventListener('click', shakeAnim)
+}</script>
+</body>
+</html>
