@@ -19,7 +19,7 @@
 #dividend {
             font-family:verdana, Arial, sans-serif;
             font-weight:bold;
-            color:#32a852
+            color:#32a852;
             
         }
 
@@ -61,7 +61,7 @@
             font-family:verdana, Arial, sans-serif;
             font-style:italic;
             font-weight:bold;
-            color:#56bf7e;
+            color:#32a88c;
         }
 
 #steps-start {
@@ -75,5 +75,5 @@
             font-family:verdana, Arial, sans-serif;
             font-style:italic;
             font-weight:bold;
-            color:#b5094b;
+            color:#4ce074;
         }
