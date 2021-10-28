@@ -68,5 +68,12 @@
             font-family:verdana, Arial, sans-serif;
             font-style:italic;
             font-weight:bold;
-            color:#7f4dd6;
+            color:#d64d6b;
+        }
+
+#step2 {
+            font-family:verdana, Arial, sans-serif;
+            font-style:italic;
+            font-weight:bold;
+            color:#b5094b;
         }
