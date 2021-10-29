@@ -1,0 +1,124 @@
+#welcome { 
+  font-family:Helvetica, Arial,sans-serif,serif,verdana;
+  font-size: 42px;
+  }
+
+
+ body {
+            background-color:#3248a8
+
+        }
+
+#before-we-start {
+            font-family:Arial;
+            font-style:italic;
+            font-weight:bold;
+            color:#a832a2;
+        }
+ 
+
+#iframe-thing {
+            font-family:verdana, Arial, sans-serif;
+            font-weight:bold;
+            color:#ad2840;
+            
+        }
+
+#divisor {
+            font-family:verdana, Arial, sans-serif;
+            font-style:italic;
+            font-weight:bold;
+            color:#7e20d6;
+        }
+
+#quotient {
+            font-family:verdana, Arial, sans-serif;
+            font-style:italic;
+            font-weight:bold;
+            color:#f54295;
+        }
+            
+#introduction {
+            font-family:Cutive,verdana, Arial, sans-serif;
+            font-weight:bold;
+            color:#0087bd;
+        }
+
+#ex-video {
+            font-family:verdana, Arial, sans-serif;
+            font-style:italic;
+            font-weight:bold;
+            color:#7542f6;
+        }
+
+#rickrollplaceholder {
+            font-family:verdana, Arial, sans-serif;
+            font-style:italic;
+            font-weight:bold;
+            color:#0583b5;
+        }
+
+#step1 {
+            font-family:verdana, Arial, sans-serif;
+            font-style:italic;
+            font-weight:bold;
+            color:#32a88c;
+        }
+
+#steps-start {
+            font-family:verdana, Arial, sans-serif;
+            font-style:italic;
+            font-weight:bold;
+            color:#d64d6b;
+        }
+
+#step2 {
+            font-family:verdana, Arial, sans-serif;
+            font-style:italic;
+            font-weight:bold;
+            color:#1f488f;
+        }
+
+#step3 {
+            font-family:verdana, Arial, sans-serif;
+            font-style:italic;
+            font-weight:bold;
+            color:#de0b47;
+        }
+
+#step4 {
+            font-family:verdana, Arial, sans-serif;
+            font-style:italic;
+            font-weight:bold;
+            color:#250694;
+  /* my friend helped me with picking the hex color for step 4 some credit goes to her*/
+        }
+#notes {
+            font-family:verdana, Arial, sans-serif;
+            font-style:italic;
+            font-weight:bold;
+            color:#009ba3;
+        }
+
+#while-you-are-here {
+            font-family:verdana, Arial, sans-serif;
+            font-style:italic;
+            font-weight:bold;
+            color:#633144;
+        }
+
+
+#cookie {
+            font-family:verdana, Arial, sans-serif;
+            font-style:italic;
+            font-weight:bold;
+            color:#3a8687;
+        }
+
+
+#super-secret-fnf {
+            font-family:verdana, Arial, sans-serif;
+            font-style:italic;
+            font-weight:bold;
+            color:#0e7d42;
+        }
