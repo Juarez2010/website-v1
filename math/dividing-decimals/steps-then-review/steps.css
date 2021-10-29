@@ -90,5 +90,34 @@
             font-style:italic;
             font-weight:bold;
             color:#250694;
-  /* my friend helped me with picking the hex color for step 4*/
+  /* my friend helped me with picking the hex color for step 4 some credit goes to her*/
+        }
+#notes {
+            font-family:verdana, Arial, sans-serif;
+            font-style:italic;
+            font-weight:bold;
+            color:#009ba3;
+        }
+
+#while-you-are-here {
+            font-family:verdana, Arial, sans-serif;
+            font-style:italic;
+            font-weight:bold;
+            color:#633144;
+        }
+
+
+#cookie {
+            font-family:verdana, Arial, sans-serif;
+            font-style:italic;
+            font-weight:bold;
+            color:#3a8687;
+        }
+
+
+#super-secret-fnf {
+            font-family:verdana, Arial, sans-serif;
+            font-style:italic;
+            font-weight:bold;
+            color:#0e7d42;
         }
