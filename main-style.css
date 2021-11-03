@@ -16,31 +16,32 @@
         }
  
 
-#dividend {
+#scratch-pfp {
             font-family:verdana, Arial, sans-serif;
             font-weight:bold;
             color:#32a852;
             
         }
 
-#divisor {
+#github {
             font-family:verdana, Arial, sans-serif;
             font-style:italic;
             font-weight:bold;
-            color:#7e20d6;
+            color:#485464;
+
         }
 
-#quotient {
+#scratch {
             font-family:verdana, Arial, sans-serif;
             font-style:italic;
             font-weight:bold;
-            color:#f54295;
+            color:#f6a02b;
         }
             
-#introduction {
+#gdrive-vids {
             font-family:Cutive,verdana, Arial, sans-serif;
             font-weight:bold;
-            color:#0087bd;
+            color:#0e7c3a;
         }
 
 #ex-video {
