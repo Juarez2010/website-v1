@@ -1,4 +1,5 @@
 idk
 
 Here's netwox's pfp lol.
-<img src="netwox-pfp"> 
+
+<img src="netwox-pfp.png"> 
